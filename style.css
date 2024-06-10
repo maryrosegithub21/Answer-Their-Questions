@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+#parent{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    /* border: 5px solid rgb(34, 32, 32); */
+    margin: 100px 170px;
+    padding: 10px 360px;
+    position: relative;
+    
+}
+button{
+    height: 80px;
+    width: 130px;
+    margin: 10px 10px;
+}
+h1 {
+    text-align: center;
+}
+.start {
+margin: 0px 600px;
+    background-color: brown;
+}
+#boxRandom{
+    background-color: blue;
+
+}
+
+
+
+/* div{
+    background-color: blue;
+    height: 120px;
+    width: 25%;
+    float: left;
+    border: 2px solid black;
+   
+}
+button{
+    height: 120px;
+    width: 20%;
+    /* margin: 10px 10px; */
+/* } */
+/* #container { */
+    /* background-color: aqua; */
+/* } */ 
