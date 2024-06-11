@@ -3,7 +3,13 @@
 }
 body{
     margin: 0;
+    
+    /* justify-content: begin; */
 }
+/* #left{
+    display:flex;
+    justify-content: first baseline;
+} */
 #parent{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -22,30 +28,34 @@ button{
 h1 {
     text-align: center;
 }
-.start {
-margin: 0px 600px;
-    background-color: brown;
-}
+
 #boxRandom{
     background-color: blue;
 
 }
+#child{
+    display: none;
+    z-index: 500;
+    position: absolute;
+    background-color: grey;
+    padding: 0px 0px;
+    margin: 0px 300px;
+    width: 50%;
+    height: 100%;
+    border-radius: 10%;
+    border: 5px solid black;
 
-
-
-/* div{
-    background-color: blue;
-    height: 120px;
-    width: 25%;
-    float: left;
-    border: 2px solid black;
-   
 }
-button{
-    height: 120px;
-    width: 20%;
-    /* margin: 10px 10px; */
-/* } */
-/* #container { */
-    /* background-color: aqua; */
-/* } */ 
+#buttonDiv{
+    padding: 0px 0px;
+    margin: 0px 300px;
+    justify-content: center;
+    display:flex;
+}
+#child1Ans{
+    justify-content: center;
+    display: inline;
+    padding: 0px 0px;
+    margin: 0px 5px;
+    
+}

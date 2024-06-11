@@ -1,3 +1,5 @@
+
+
 // === multiply  div using for loop ==== //
 // function start(){
 // let container = document.getElementById('container');
@@ -129,35 +131,33 @@
 
 
 
-// ======= working code =====///
-// // Codes for Each Question
-// function play(event){
+let randIndex = 1; // assign 1 to move the style background all the way to div
+boxChangeColor(randIndex);
 
-// }
-// window.addEventListener('start', function(){
-//   return false;
-// });
-// let times = 1000;   //Here put the number of times you want to auto submit
+// for interval change color
+let myInterval = null; // assign a null to access the two different function for set interval auto click
+if (myInterval){
+  myInterval = setInterval(function(){document.getElementById('start').click() },80);
+  // myQuestion = setInterval(function(){document.getElementById("child").style.display="block"},30);
+  document.getElementById("child").style.display="none";
+}
+// to start button of the game
+function start(count) { 
+  boxChangeColor(randIndex += count);
+  if (!myInterval){
+    myInterval = setInterval(function(){document.getElementById('start').click() },80); 
+    // myQuestion = setInterval(function(){document.getElementById("child").style.display="block"},30); 
+    document.getElementById("child").style.display="none";
 
-// const element = document.querySelector('start');
-
-
-let randIndex = 1;
-boxChangeColor(randIndex); 
-setInterval(function(){document.getElementById('start').click()},80);
-
- function start(count) {
-//  if(times == 0) return;
-// element.click();
- boxChangeColor(randIndex += count);
-//  startButton.onclick = alertMe;
-  // start.submit();
-  // times--;
-  // setTimeout(start, 1000);   //Each second
- }
-
-//  main game auto color changess
-// function alertMe(){
+  }
+} 
+// to stop the color for selecting
+function stopGame() {
+    clearInterval(myInterval);
+    myInterval= null;
+    play();
+}
+// for change color of the div
 function boxChangeColor(count) {
   let i;
   let boxRandom = document.getElementsByClassName("boxRandom");
@@ -168,14 +168,38 @@ function boxChangeColor(count) {
    randIndex = boxRandom.length
  }
   for (i = 0; i < boxRandom.length; i++) {
-    boxRandom[i].style.backgroundColor = "red"; 
+    boxRandom[i].style.backgroundColor = "white"; 
   }
-  boxRandom[randIndex-1].style.backgroundColor = "yellow";
-
+  boxRandom[randIndex-1].style.backgroundColor = "black";
 }
-// ======= working code =====///
-
-
+// for each button in the div which will pop up the question in each form
+function play(){
+  document.getElementById("child").style.display="block";
+  // myQuestion = setInterval(function(){document.getElementById("child").style.display="block"},50);
+// document.getElementById("child").style.display="block";
+// if(document.getElementById('child1Ans1').checked) {
+//   alert("Congratulations, You're answer is correct")
+// }else if(document.getElementById('child1Ans2').checked) {
+//   alert("Sorry, Wrong Answer")
+// }else if(document.getElementById('child1Ans3').checked) {
+//   alert("Sorry, Wrong Answer")
+// }else if(document.getElementById('child1Ans4').checked) {
+//   alert("Sorry, Wrong Answer")
+// } 
+}
+// function submit(){
+  // preventDefault();
+  // document.getElementById("child").style.display="block";
+  // if(document.getElementById('child1Ans1').checked) {
+  //   alert("Congratulations, You're answer is correct")
+  // }else if(document.getElementById('child1Ans2').checked) {
+  //   alert("Sorry, Wrong Answer")
+  // }else if(document.getElementById('child1Ans3').checked) {
+  //   alert("Sorry, Wrong Answer")
+  // }else if(document.getElementById('child1Ans4').checked) {
+  //   alert("Sorry, Wrong Answer")
+// }
+// }
 
 
   // let nIntervID;
