@@ -187,19 +187,25 @@ function play(){
 //   alert("Sorry, Wrong Answer")
 // } 
 }
-// function submit(){
-  // preventDefault();
-  // document.getElementById("child").style.display="block";
-  // if(document.getElementById('child1Ans1').checked) {
-  //   alert("Congratulations, You're answer is correct")
-  // }else if(document.getElementById('child1Ans2').checked) {
-  //   alert("Sorry, Wrong Answer")
-  // }else if(document.getElementById('child1Ans3').checked) {
-  //   alert("Sorry, Wrong Answer")
-  // }else if(document.getElementById('child1Ans4').checked) {
-  //   alert("Sorry, Wrong Answer")
-// }
-// }
+function submitAnswer() {
+  const radios = document.getElementsByName('choice');
+  let val = "";
+
+  for (let i = 0; i < radios.length; i++) {
+      if (radios[i].checked) {
+          val = radios[i].value;
+          break;
+      }
+  }
+
+  if (val === "") {
+      alert('Please select a choice answer.');
+  } else if (val === "1 Timothy 2:4") {
+      alert('Answer is correct!');
+  } else {
+      alert('Answer is wrong.');
+  }
+}
 
 
   // let nIntervID;
